@@ -4,7 +4,7 @@ This repository contains a Docker container that, when started, will join an Ama
 
 ## Prerequisites
 
-You will need AWSCLI installed and configured in your terminal.
+You will need AWSCLI & docker installed and configured in your terminal.
 
 ## Copilot - Installation and Configuration
 
@@ -35,6 +35,7 @@ Dockerfile: Use an existing image instead
 ## Initialize Environment
 ```
 copilot env init
+copilot app ls
 ```
 Environment name: dev
 Credential source: [profile default]
@@ -43,6 +44,7 @@ Default environment configuration? Yes, use default.
 ## Deploy your environment.
 ```
 copilot env deploy --name dev
+copilot env ls
 ```
 
 ## Redeploying after a configuration change
@@ -60,3 +62,8 @@ copilot secret init
 * `RTMP_URL`: the URL of the RTMP endpoint,
   * Twitch example: `rtmp://live.twitch.tv/app/<stream key>`
   * YouTube Live example: `rtmp://a.rtmp.youtube.com/live2/<stream key>`
+
+## Delete application - WARNING!!
+```
+copilot app delete amazon-chime-meeting-broadcast
+```
